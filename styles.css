@@ -1,17 +1,28 @@
+@font-face {
+  font-family: Seven Segments;
+  src: url(fonts/Seven\ Segment.ttf);
+}
+
 * {
   margin: 0;
+  margin-right: 0;
+  padding: 0;
+  font-family: Verdana, Tahoma, sans-serif;
 }
 
   body {
-  font-family: 'Courier New', Courier, monospace;
+  background-color: black;
+  color: whitesmoke
 }
 
 .container {
+  position: fixed;
+  height: 100%;
+  width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 10px;
-  margin: 10px;
+  justify-content: center;
 }
 
 .timeContainer {
@@ -21,7 +32,8 @@
 }
 
 .number {
-  font-size: 50px;
+  font-family: Seven Segments; 
+  font-size: 100px;
   font-weight: bolder;
 }
 
@@ -32,4 +44,53 @@
 
 .button {
   margin: 10px;
+  height: 100px;
+  width: 100px;
+  border-radius: 50px;
+  font-size: 150%;
+  transition: 0.03s ease;
+  color: rgb(207, 207, 207);
+  background-color: rgb(114, 114, 114)
+}
+
+.button:hover {
+  transition: 0.2s ease;
+  box-shadow: 0 0px 50px;
+}
+
+.button:active {
+  transition: 0.01s ease-in;
+}
+
+#startButton:hover {
+  box-shadow: rgb(0, 255, 0);
+  background-color: rgb(110, 255, 110);
+  color: rgb(110, 255, 110);
+}
+
+#startButton:active {
+  height: 90px;
+  width: 90px;
+}
+
+#stopButton:hover {
+  box-shadow:rgb(231,180,22);
+  background-color: rgb(255, 239, 96);
+  color: rgb(255, 239, 96);
+}
+
+#stopButton:active {
+  height: 90px;
+  width: 90px;
+}
+
+#resetButton:hover {
+  box-shadow: rgb(204,50,50);
+  background-color: rgb(255, 74, 74);
+  color: rgb(255, 74, 74);
+}
+
+#resetButton:active {
+  height: 90px;
+  width: 90px;
 }
